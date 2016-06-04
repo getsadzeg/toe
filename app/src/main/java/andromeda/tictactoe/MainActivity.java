@@ -184,11 +184,15 @@ public class MainActivity extends AppCompatActivity {
         if(map.get(a).equals(X) && map.get(b).equals(X) &&
                 map.get(c).equals(X))
             Toast.makeText(getApplicationContext(), "მოიგო X-მა",
-                    Toast.LENGTH_LONG).show();
+                    Toast.LENGTH_SHORT).show();
         else if(map.get(a).equals(O) && map.get(b).equals(O) &&
                 map.get(c).equals(O))
             Toast.makeText(getApplicationContext(), "მოიგო O-მა",
-                    Toast.LENGTH_LONG).show();
+                    Toast.LENGTH_SHORT).show();
+        else if(counter == 9) {
+            Toast.makeText(getApplicationContext(), "ფრეა",
+                    Toast.LENGTH_SHORT).show();
+        }
     }
     public void restartOnClick(View k) {
         bt1.setText("");
@@ -209,6 +213,7 @@ public class MainActivity extends AppCompatActivity {
         map.put(8, "");
         bt9.setText("");
         map.put(9, "");
+        System.out.println(counter);
         counter = 0;
     }
 
